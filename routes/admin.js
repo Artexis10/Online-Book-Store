@@ -7,16 +7,23 @@ const products = [];
 const router = express.Router();
 
 router.get('/add-product', function(req, res){
-    
-    res.sendFile(path.join(rootDirectory, 'views', 'add-product.html'));
+    res.render('add-product', {
+        pageTitle: "Add New Product"
+    })
+    //res.sendFile(path.join(rootDirectory, 'views', 'add-product.html'));
 });
 
 router.post('/add-product', function(req, res){
     console.log(req.body.title);
-    products.push({title: req.body.title});
+    products.push({
+        title: req.body.title,
+        //price: req.body.price,
+        //description: req.body.desc
+    });
     res.redirect('/');
 });
 
+exports.products = products;
+exports.router = router;
 
-
-module.exports = router;
+//module.exports = router;

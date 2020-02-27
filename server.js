@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.use('/admin', adminData);
+app.use('/admin', adminData.router);
 app.use(userRoutes);
 
 
@@ -33,7 +33,7 @@ app.use(function(req, res, next){
 
 
 
-app.listen(5000, function(){
+app.listen(8000, function(){
     console.log("Server is running on port 3000");
     //console.log("Path", path);
 });
