@@ -22,7 +22,8 @@ app.use(function(req, res, next){
     res.status(404).render('404', {
         pageTitle: "Oops! Page Not Found!",
         pageNotFound: "No Luck. Try Again.",
-        myVariable: "Hello World!"
+        myVariable: "Hello World!",
+        path: ""
     
     });
 
@@ -33,7 +34,7 @@ app.use(function(req, res, next){
 
 
 
-app.listen(8000, function(){
+app.listen(5000, function(){
     console.log("Server is running on port 3000");
     //console.log("Path", path);
 });

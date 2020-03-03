@@ -11,11 +11,12 @@ const router = express.Router();
 router.get('/', function(req, res){
     const products = adminData.products;
     
-    console.log("Hello from shop.js ", products);
+    //console.log("Hello from shop.js ", products);
     
     res.render('shop', {
         pageTitle: "Welcome!",
         pageWelcome: "Welcome to My Shop!",
+        path: "/",
         listOfProducts: products
     });
     //res.sendFile(path.join(rootDirectory, 'views', 'shop.html'));
