@@ -18,8 +18,8 @@ router.post('/add-product', function(req, res){
     console.log(req.body.title);
     products.push({
         title: req.body.title,
-        //price: req.body.price,
-        //description: req.body.desc
+        price: req.body.price,
+        description: req.body.desc
     });
     res.redirect('/');
 });
