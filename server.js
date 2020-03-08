@@ -32,7 +32,7 @@ app.use(function(req, res, next){
     //res.status(404).send("Not found");
 });
 
-app.listen(5000, function(){
+app.listen(process.env.PORT || 5000, function(){
     console.log("Server is running on port 3000");
     //console.log("Path", path);
 });
