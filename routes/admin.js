@@ -19,7 +19,7 @@ router.post('/add-product', function(req, res){
     products.push({
         title: req.body.title,
         price: req.body.price,
-        description: req.body.desc
+        description: req.body.description
     });
     res.redirect('/');
 });
